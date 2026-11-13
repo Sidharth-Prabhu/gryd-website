@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor">
+  <!-- Squares -->
+  <rect x="134" y="143" width="146" height="146" />
+  <rect x="439" y="143" width="146" height="146" />
+  <rect x="744" y="143" width="146" height="146" />
+
+  <rect x="134" y="439" width="146" height="146" />
+  <rect x="439" y="439" width="146" height="146" />
+  <rect x="744" y="439" width="146" height="146" />
+
+  <rect x="134" y="735" width="146" height="146" />
+  <rect x="439" y="735" width="146" height="146" />
+  <rect x="744" y="735" width="146" height="146" />
+
+  <!-- Horizontal connectors -->
+  <rect x="280" y="194" width="159" height="44" />
+  <rect x="585" y="194" width="159" height="44" />
+  <rect x="585" y="490" width="159" height="44" />
+  <rect x="280" y="786" width="159" height="44" />
+  <rect x="585" y="786" width="159" height="44" />
+
+  <!-- Vertical connectors -->
+  <rect x="185" y="289" width="44" height="150" />
+  <rect x="185" y="585" width="44" height="150" />
+  <rect x="795" y="585" width="44" height="150" />
+</svg>

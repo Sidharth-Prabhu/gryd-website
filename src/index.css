@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #141212;
+  --bg-secondary: #191716;
+  --bg-card: #171615;
+  --text-primary: #F0E6E2;
+  --text-secondary: #A9A19E;
+  --text-muted: #77716E;
+  --border-subtle: #302C2A;
+  --accent: #FF5A1F;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Subtle Technical Grid Background */
+.bg-tech-grid {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.04) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+.bg-dot-matrix {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(255, 90, 31, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Technical Guideline border */
+.technical-line-v {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(48, 44, 42, 0.8),
+    rgba(48, 44, 42, 0.8) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  pointer-events: none;
+}
+
+/* Fine border corner plus mark */
+.corner-cross {
+  position: relative;
+}
+.corner-cross::before {
+  content: "+";
+  position: absolute;
+  font-family: monospace;
+  font-size: 10px;
+  color: #77716E;
+  line-height: 1;
+}
+
+/* Custom Scrollbar for code/logs */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #141212;
+}
+::-webkit-scrollbar-thumb {
+  background: #302C2A;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #423D3A;
+}
+
+/* Monospace font */
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
