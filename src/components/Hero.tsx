@@ -8,11 +8,12 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onExploreClick, onDownloadClick }) => {
-  const [activeTab, setActiveTab] = useState<'macos-linux' | 'windows'>('macos-linux');
+  const [activeTab, setActiveTab] = useState<'macos-linux' | 'docker' | 'windows'>('macos-linux');
   const [copied, setCopied] = useState(false);
 
   const commands = {
     'macos-linux': 'brew install gryd',
+    'docker': 'docker run -it --rm -v "$(pwd)":/workspace -p 8000:8000 -p 3000:3000 ghcr.io/sidharth-prabhu/gryd:latest run',
     'windows': 'winget install gryd',
   };
 
@@ -67,6 +68,19 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onDownloadClick }) =
                     macOS &amp; Linux
                   </button>
                   <button
+                    onClick={() => setActiveTab('docker')}
+                    className={`px-3 py-1 text-xs font-mono rounded transition-colors flex items-center gap-1.5 ${
+                      activeTab === 'docker'
+                        ? 'bg-[#141212] text-[#F0E6E2] border border-[#302C2A]'
+                        : 'text-[#77716E] hover:text-[#A9A19E]'
+                    }`}
+                  >
+                    <span>Docker</span>
+                    <span className="text-[10px] bg-[#FF5A1F]/15 text-[#FF5A1F] px-1 py-0.2 rounded font-mono">
+                      Multi-Arch
+                    </span>
+                  </button>
+                  <button
                     onClick={() => setActiveTab('windows')}
                     className={`px-3 py-1 text-xs font-mono rounded transition-colors flex items-center gap-1.5 ${
                       activeTab === 'windows'
@@ -114,11 +128,13 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onDownloadClick }) =
               <div className="px-3.5 py-2 border-t border-[#302C2A]/60 bg-[#171615] text-[11px] font-mono text-[#77716E] flex items-center justify-between">
                 {activeTab === 'macos-linux' ? (
                   <span>Official Tap: Sidharth-Prabhu/tap · Brew Bottle formula</span>
+                ) : activeTab === 'docker' ? (
+                  <span>GitHub Container Registry: ghcr.io/sidharth-prabhu/gryd:latest</span>
                 ) : (
                   <span>WinGet package manifest SidharthPrabhu.Gryd pending catalog sync</span>
                 )}
                 <a href="#downloads" className="text-[#A9A19E] hover:text-[#FF5A1F] transition-colors">
-                  Manual .tar.gz / .zip →
+                  All Install Methods →
                 </a>
               </div>
             </div>

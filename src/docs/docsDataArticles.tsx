@@ -70,6 +70,16 @@ export const DOC_ARTICLES: Record<string, {
           code={`# Add the official tap\nbrew tap Sidharth-Prabhu/tap\n\n# Install gryd\nbrew install gryd`}
         />
 
+        <h3 className="text-lg font-normal text-[#F0E6E2] pt-4">Docker Container (GitHub Container Registry)</h3>
+        <p className="text-sm text-[#A9A19E]">
+          Run gryd without installing anything locally on the host machine using the multi-arch container image:
+        </p>
+        <CodeBlock
+          title="Run via Docker"
+          language="bash"
+          code={`# Pull the multi-arch container image\ndocker pull ghcr.io/sidharth-prabhu/gryd:latest\n\n# Run the interactive TUI mounting the host workspace\ndocker run -it --rm \\\n  -v "$(pwd)":/workspace \\\n  -p 8000:8000 \\\n  -p 3000:3000 \\\n  ghcr.io/sidharth-prabhu/gryd:latest run`}
+        />
+
         <h3 className="text-lg font-normal text-[#F0E6E2] pt-4">Windows (via WinGet)</h3>
         <p className="text-sm text-[#A9A19E]">
           On Windows 10/11, install gryd using the Windows Package Manager (PowerShell):
