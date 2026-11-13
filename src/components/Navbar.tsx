@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, ArrowDownToLine, BookOpen, Terminal, Sparkles, Sliders, Layers, Download, Check, Copy } from 'lucide-react';
+import { X, ArrowDownToLine, BookOpen, Cpu, Sparkles, Sliders, Layers, Download, Check, Copy } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { GrydLogo } from './GrydLogo';
 
@@ -108,10 +108,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
               
               <button 
-                onClick={() => handleNavClick('tui-demo')}
+                onClick={() => handleNavClick('lifecycle-engine')}
                 className="whitespace-nowrap text-[#A9A19E] hover:text-[#F0E6E2] transition-colors flex items-center gap-1.5 py-1"
               >
-                <span>Interactive TUI</span>
+                <span>Lifecycle Engine</span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A1F] animate-pulse"></span>
               </button>
 
@@ -310,12 +310,12 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </button>
 
                 <button
-                  onClick={() => handleNavClick('tui-demo')}
+                  onClick={() => handleNavClick('lifecycle-engine')}
                   className="w-full text-left px-3 py-2.5 rounded-lg text-sm text-[#A9A19E] hover:text-[#F0E6E2] hover:bg-[#191716] flex items-center justify-between transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <Terminal className="w-4 h-4 text-[#77716E]" />
-                    <span>Interactive TUI Simulator</span>
+                    <Cpu className="w-4 h-4 text-[#77716E]" />
+                    <span>Lifecycle Engine</span>
                   </div>
                   <span className="w-2 h-2 rounded-full bg-[#FF5A1F] animate-pulse"></span>
                 </button>

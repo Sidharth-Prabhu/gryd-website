@@ -57,8 +57,8 @@ export const Footer: React.FC<FooterProps> = ({ onDocsClick }) => {
                 </a>
               </li>
               <li>
-                <a href="#tui-demo" className="hover:text-[#F0E6E2] transition-colors">
-                  Interactive TUI
+                <a href="#lifecycle-engine" className="hover:text-[#F0E6E2] transition-colors">
+                  Lifecycle Engine
                 </a>
               </li>
               <li>

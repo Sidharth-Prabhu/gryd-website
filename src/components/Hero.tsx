@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Copy, Check, Terminal, ArrowRight, ShieldCheck, Cpu, Zap, Radio } from 'lucide-react';
+import { Copy, Check, ArrowRight, ShieldCheck, Cpu, Zap, Radio } from 'lucide-react';
 import { GrydLogo } from './GrydLogo';
 
 interface HeroProps {
@@ -153,8 +153,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onDownloadClick }) =
               onClick={onExploreClick}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-[#171615] hover:bg-[#191716] border border-[#302C2A] hover:border-[#423D3A] text-[#F0E6E2] rounded transition-all"
             >
-              <Terminal className="w-4 h-4 text-[#FF5A1F]" />
-              <span>Try Interactive TUI</span>
+              <Cpu className="w-4 h-4 text-[#FF5A1F]" />
+              <span>Explore Lifecycle Engine</span>
             </button>
           </div>
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { TuiSimulator } from './components/TuiSimulator';
+import { LifecycleEngine } from './components/LifecycleEngine';
 import { BentoFeatures } from './components/BentoFeatures';
 import { ConfigShowcase } from './components/ConfigShowcase';
 import { CliReference } from './components/CliReference';
@@ -73,8 +73,8 @@ export const App: React.FC = () => {
     }
   };
 
-  const scrollToTui = () => {
-    const el = document.getElementById('tui-demo');
+  const scrollToLifecycle = () => {
+    const el = document.getElementById('lifecycle-engine');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -100,10 +100,10 @@ export const App: React.FC = () => {
       
       <main className="flex-1">
         <Hero 
-          onExploreClick={scrollToTui} 
+          onExploreClick={scrollToLifecycle} 
           onDownloadClick={scrollToDownloads} 
         />
-        <TuiSimulator />
+        <LifecycleEngine />
         <BentoFeatures />
         <ConfigShowcase />
         <CliReference />
